@@ -50,7 +50,7 @@ const displayProductItems = items => {
                       <div class="product__price">
                         <h4>$${product.price}</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
+                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
                     </div>
                   <ul>
                       <li>
