@@ -20,7 +20,9 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="styles.css" />
+  
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
   <title>Pet Mart | Tên thú cưng, phụ kiện được xem chi tiết</title>
 </head>
@@ -29,14 +31,22 @@
   <header id="header" class="header">
     <div class="navigation">
       <div class="container">
-        <div class="row header__top" id="row-login">
+        <input type="hidden" id="usernameBE" value="" />  
+        <input type="hidden" id="valuePetOrAccessori" value="cho" />  
+        <div class="row header__top" >
           <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
             <p>206 Đường Kim Mã, Quận Ba Đình, TP. Hà Nội</p>
           </div>
-          <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
+          <div id="row-login" class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
             <div class="header__actions">
-              <a href="login.html"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+              <a href="login.html">Đăng nhập</a>
               <a href="register.html">Đăng ký</a>
+            </div>
+          </div>
+          <div id="row-logout" class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+            <div class="header__actions">
+              <a href="" id="hello-name"></a>
+              <a href="">Đăng xuất</a>
             </div>
           </div>
         </div>
@@ -79,29 +89,30 @@
           </div>
 
           <div class="nav__icons">
-            <a href="#" class="icon__item">
-              <svg class="icon__user">
-                <use xlink:href="./images/sprite.svg#icon-location"></use>
-              </svg>
-            </a>
-            <a href="#" class="icon__item">
-              <svg class="icon__user">
-                <use xlink:href="./images/sprite.svg#icon-user"></use>
-              </svg>
-            </a>
-
-            <a href="#" class="icon__item">
-              <svg class="icon__search">
-                <use xlink:href="./images/sprite.svg#icon-search"></use>
-              </svg>
-            </a>
-
-            <a href="#" class="icon__item">
-              <svg class="icon__cart">
-                <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
-              </svg>
-              <span id="cart__total">0</span>
-            </a>
+            <div id="location" class="hide"> 
+              <a href="#" class="icon__item">
+                <svg class="icon__user">
+                  <use xlink:href="./images/sprite.svg#icon-location"></use>
+                </svg>
+              </a>
+            </div>
+            <div id="search-box" style="margin-right: 1rem;">
+              <input class="form-control search-form"  type="search" aria-label="Search" placeholder="Tìm kiếm ...">
+            </div>
+              <a href="#" class="icon__item">
+                <svg class="icon__search">
+                  <use xlink:href="./images/sprite.svg#icon-search"></use>
+                </svg>
+              </a>
+            
+            <div id="cart" class="hide"> 
+              <a href="cart.html" class="icon__item">
+                <svg class="icon__cart">
+                  <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
+                </svg>
+                <span id="cart__total">0</span>
+              </a>
+            </div>
           </div>
         </nav>
       </div>
@@ -134,31 +145,31 @@
             <div class="details__container--left">
               <div class="product__pictures">
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone1.jpeg" id="pic1" />
+                  <img class="picture" src="./images/products/iPhone/500-1.png" id="pic1" />
                 </div>
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone2.jpeg" id="pic2" />
+                  <img class="picture" src="./images/products/iPhone/500-2.png" id="pic2" />
                 </div>
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone3.jpeg" id="pic3" />
+                  <img class="picture" src="./images/products/iPhone/500-3.png" id="pic3" />
                 </div>
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone4.jpeg" id="pic4" />
+                  <img class="picture" src="./images/products/iPhone/500-4.png" id="pic4" />
                 </div>
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone5.jpeg" id="pic5" />
+                  <img class="picture" src="./images/products/iPhone/500-5.png" id="pic5" />
                 </div>
               </div>
               <div class="product__picture" id="product__picture">
                 <!-- <div class="rect" id="rect"></div> -->
                 <div class="picture__container">
-                  <img src="./images/products/iPhone/iphone1.jpeg" id="pic" />
+                  <img src="./images/products/iPhone/500-1.png" id="pic" />
                 </div>
               </div>
               <div class="zoom" id="zoom"></div>
             </div>
 
-            <div class="product-details__btn">
+            <div id="phuKien" class="product-details__btn product-details__btn_accessori">
               <a class="add" href="javascript:">
                 <span>
                   <svg>
@@ -166,7 +177,7 @@
                   </svg>
                 </span>
                 THÊM VÀO GIỎ HÀNG</a>
-              <a class="buy" href="#">
+              <a class="buy" href="check-out.html">
                 <span>
                   <svg>
                     <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
@@ -175,9 +186,19 @@
                 MUA NGAY
               </a>
             </div>
+            <div id="cho" class="product-details__btn product-details__btn_pet hide" style="">
+              <a class="buy" href="check-out.html">
+                <span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
+                  </svg>
+                </span>
+                ĐẶT CỌC NGAY
+              </a>
+            </div>
           </div>
 
-          <div class="product-detail__right">
+          <div id="phu-kien" class="product-detail__right">
             <div class="product-detail__content">
               <h3>Vòng cổ chuông cho mèo</h3>
               <div class="price">
@@ -261,6 +282,101 @@
                   <li>
                     <span>Loại sản phẩm :</span>
                     <a href="#">Phone</a>
+                  </li>
+                  <li>
+                    <span>Trạng thái :</span>
+                    <a href="#" class="in-stock">Còn hàng  (15 sản phẩm)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--Div pet-->
+          <div id="thuCung" class="product-detail__right hide">
+            <div class="product-detail__content">
+              <h3>Husky Shibarian</h3>
+              <div class="price">
+                <span class="new__price">80000 đ</span>
+              </div>
+              <div class="product__review">
+                <div class="rating">
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                  </svg>
+                </div>
+                <a href="#description"  class="rating__quatity">3 nhận xét</a>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                a doloribus iste natus et facere?
+                dolor sit amet consectetur adipisicing elit. Sunt
+                a doloribus iste natus et facere?
+              </p>
+              <div class="product__info-container">
+                <ul class="product__info">
+                  <li class="select">
+                    <div class="select__option">
+                      <label for="colors">Màu lông: </label>
+                      <select name="colors" id="colors" class="select-box">
+                        <option value="xanh">Xanh dương</option>
+                        <option value="do">Đỏ</option>
+                        <option value="hong">Hồng</option>
+                        <option value="cam">Cam</option>
+                        <option value="xanhLa">Xanh lá</option>
+                      </select>
+                    </div>
+                    <div class="select__option">
+                      <label for="size">Màu mắt :</label>
+                      <select name="size" id="size" class="select-box">
+                        <option value="xanhDuong">Xanh dương</option>
+                        <option value="den">Đen</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li>
+
+                    <div class="input-counter">
+                      <span>Số lượng :</span>
+                      <div>
+                        <span id="" class="minus-btn">
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </span>
+                        <input type="text" min="1" value="1" max="10" class="counter-btn">
+                        <span class="plus-btn">
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <span>Số tiền :</span>
+                    <a href="#" class="new__price">2500000 đ</a>
+                  </li>
+                  <li>
+                    <span>Giống :</span>
+                    <a href="#">Husky</a>
+                  </li>
+                  <li>
+                    <span>Loại thú cưng :</span>
+                    <a href="#">Chó</a>
                   </li>
                   <li>
                     <span>Trạng thái :</span>
@@ -841,7 +957,7 @@
   </main>
 
   <!-- Footer -->
-  <footer id="footer" class="section footer">
+  <footer id="footer" class="section footer" style="background-image: url(images/Footer-Background-Image.png)">
     <div class="container">
       <div class="footer__top">
         <div class="footer-top__box">
@@ -922,6 +1038,8 @@
   <script src="./js/products.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/slider.js"></script>
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/custom.js"></script>
 </body>
 
 </html>

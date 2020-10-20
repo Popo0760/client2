@@ -60,14 +60,6 @@ const displayProductItems = items => {
                           </svg>
                         </a>
                       </li>
-                       
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
                   </ul>
                   </div>
                   `
@@ -145,7 +137,7 @@ let picActive = 1;
       const target = e.target.closest("img");
       if (!target) return;
       const id = target.id.slice(3);
-      changeImage(`./images/products/iPhone/iphone${id}.jpeg`, id);
+      changeImage(`./images/products/iPhone/500-${id}.png`, id);
     });
   }
 });
