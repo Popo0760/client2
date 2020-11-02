@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
+  
   <link rel="stylesheet" href="css/styles.css" />
 
   <title>Pet Mart | Cửa hàng thú cưng và phụ kiện cho thú cưng</title>
@@ -28,8 +29,7 @@
   <!-- Header -->
   <header id="header" class="header">
     <div class="navigation">
-      <div class="container">
-        <input type="hidden" id="usernameBE" value="" />  
+      <input type="hidden" id="usernameBE" value="haitn" />  
         <div class="row header__top" >
           <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
             <p>206 Đường Kim Mã, Quận Ba Đình, TP. Hà Nội</p>
@@ -42,11 +42,13 @@
           </div>
           <div id="row-logout" class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
             <div class="header__actions">
-              <a href="" id="hello-name"></a>
+              <a href="account.html" id="hello-name"></a>
               <a href="">Đăng xuất</a>
             </div>
           </div>
         </div>
+      <div class="container">
+        
         <nav class="nav">
           <div class="nav__hamburger">
             <svg>
@@ -74,7 +76,14 @@
                 <a href="index.html" class="nav__link scroll-link">Trang chủ</a>
               </li>
               <li class="nav__item">
-                <a href="#category" class="nav__link scroll-link">Category</a>
+                <a href="#category" class="nav__link scroll-link">Sản phẩm</a>
+                <!-- <ul class="sub-menu">
+                  <li class="menu-item"><a href="javascript:">Chó </a></li>
+                  <li class="menu-item"><a href="javascript:">Mèo</a></li>
+                  <li class="menu-item"><a href="javascript:">Thức ăn chó mèo</a></li>
+                  <li class="menu-item"><a href="javascript:">Đồ chơi chó mèo</a></li>
+                  <li class="menu-item"><a href="javascript:">Phụ kiện chó mèo</a></li>
+                </ul> -->
               </li>
               <li class="nav__item">
                 <a href="#news" class="nav__link scroll-link">Blog</a>
@@ -86,13 +95,7 @@
           </div>
 
           <div class="nav__icons">
-            <div id="location" class="hide"> 
-              <a href="#" class="icon__item">
-                <svg class="icon__user">
-                  <use xlink:href="./images/sprite.svg#icon-location"></use>
-                </svg>
-              </a>
-            </div>
+            
             <div id="search-box" style="margin-right: 1rem;">
               <input class="form-control search-form"  type="search" aria-label="Search" placeholder="Tìm kiếm ...">
             </div>
@@ -131,7 +134,7 @@
                 </div>
                 <div class="hero__right">
                   <!-- <div class="hero__img-container">
-                    <img class="banner_01" src="./images/banner-dog.jpg" alt="banner2" />
+                    <img class="banner_01" src="./images/" alt="banner2" />
                   </div> -->
                 </div>
               </div>
@@ -219,6 +222,7 @@
               <ul class="glide__slides latest-center">
                 <li class="glide__slide">
                   <div class="product">
+                    <input type="hidden" id="isPetOrAcc" value="accs">
                     <div class="product__header">
                       <img src="/images/products/iPhone/iphone6.jpeg" alt="product">
                     </div>
@@ -244,7 +248,8 @@
                       <div class="product__price">
                         <h4>$750</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="add"  href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="depost" href="#"><button type="submit" class="product__btn">Đặt cọc ngay</button></a>
                     </div>
                     <ul>
                       <li>
@@ -267,6 +272,7 @@
                 </li>
                 <li class="glide__slide">
                   <div class="product">
+                    <input type="hidden" class="isPetOrAcc" value="acc">
                     <div class="product__header">
                       <img src="/images/products/sumsung/samsung5.jpeg" alt="product">
                     </div>
@@ -292,7 +298,8 @@
                       <div class="product__price">
                         <h4>$900</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a onclick="addToCart()" class="add"  href="javascript:"><button  type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="depost" href="#"><button type="submit" class="product__btn">Đặt cọc ngay</button></a>
                     </div>
                     <ul>
                       <li>
@@ -315,6 +322,7 @@
                 </li>
                 <li class="glide__slide">
                   <div class="product">
+                    <input type="hidden" class="isPetOrAcc" value="acc">
                     <div class="product__header">
                       <img src="/images/products/headphone/headphone4.jpeg" alt="product">
                     </div>
@@ -340,7 +348,8 @@
                       <div class="product__price">
                         <h4>$600</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="add"  href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="depost" href="#"><button type="submit" class="product__btn">Đặt cọc ngay</button></a>
                     </div>
                     <ul>
                       <li>
@@ -363,6 +372,7 @@
                 </li>
                 <li class="glide__slide">
                   <div class="product">
+                    <input type="hidden" class="isPetOrAcc" value="accs">
                     <div class="product__header">
                       <img src="/images/products/sumsung/samsung3.jpeg" alt="product">
                     </div>
@@ -388,7 +398,8 @@
                       <div class="product__price">
                         <h4>$850</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="add"  href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="depost" href="#"><button type="submit" class="product__btn">Đặt cọc ngay</button></a>
                     </div>
                     <ul>
                       <li>
@@ -411,6 +422,7 @@
                 </li>
                 <li class="glide__slide">
                   <div class="product">
+                    <input type="hidden" class="isPetOrAcc" value="accs">
                     <div class="product__header">
                       <img src="./images/products/iPhone/iphone2.jpeg" alt="product">
                     </div>
@@ -436,7 +448,8 @@
                       <div class="product__price">
                         <h4>$450</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="add"  href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="depost" href="#"><button type="submit" class="product__btn">Đặt cọc ngay</button></a>
                     </div>
                     <ul>
                       <li>
@@ -459,6 +472,7 @@
                 </li>
                 <li class="glide__slide">
                   <div class="product">
+                    <input type="hidden" class="isPetOrAcc" value="accs">
                     <div class="product__header">
                       <img src="images/products/headphone/headphone2.jpeg" alt="product">
                     </div>
@@ -484,7 +498,8 @@
                       <div class="product__price">
                         <h4>$300</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="add"  href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="depost" href="#"><button type="submit" class="product__btn">Đặt cọc ngay</button></a>
                     </div>
                     <ul>
                       <li>
@@ -507,6 +522,7 @@
                 </li>
                 <li class="glide__slide">
                   <div class="product">
+                    <input type="hidden" class="isPetOrAcc" value="accs">
                     <div class="product__header">
                       <img src="images/products/sumsung/samsung1.jpeg" alt="product">
                     </div>
@@ -532,7 +548,8 @@
                       <div class="product__price">
                         <h4>$300</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="add"  href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="depost" href="#"><button type="submit" class="product__btn">Đặt cọc ngay</button></a>
                     </div>
                     <ul>
                       <li>
@@ -555,6 +572,7 @@
                 </li>
                 <li class="glide__slide">
                   <div class="product">
+                    <input type="hidden" class="isPetOrAcc" value="accs">
                     <div class="product__header">
                       <img src="images/products/headphone/headphone1.jpeg" alt="product">
                     </div>
@@ -580,7 +598,8 @@
                       <div class="product__price">
                         <h4>$250</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="add"  href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="depost" href="#"><button type="submit" class="product__btn">Đặt cọc ngay</button></a>
                     </div>
                     <ul>
                       <li>
@@ -603,6 +622,7 @@
                 </li>
                 <li class="glide__slide">
                   <div class="product">
+                    <input type="hidden" class="isPetOrAcc" value="accs">
                     <div class="product__header">
                       <img src="images/products/iPhone/iphone1.jpeg" alt="product">
                     </div>
@@ -628,7 +648,8 @@
                       <div class="product__price">
                         <h4>$550</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="add"  href="#"><button type="submit" class="product__btn">Thêm vào giỏ hàng</button></a>
+                      <a class="depost" href="#"><button type="submit" class="product__btn">Đặt cọc ngay</button></a>
                     </div>
                     <ul>
                       <li>
@@ -693,7 +714,9 @@
           </div>
         </div>
         <div class="category__container" data-aos="fade-up" data-aos-duration="1200">
-          <div class="category__center"></div>
+          <div class="category__center">
+            
+          </div>
         </div>
     </div>
     </section>
@@ -792,12 +815,100 @@
       </div>
     </section>
 
+    <!--New Section  -->
+    <section class="section news" id="news">
+      <div class="container">
+        <div class="title__container">
+          <div class="section__titles">
+            <div class="section__title active">
+              <span class="dot"></span>
+              <h1 class="primary__title">Chia sẻ từ khách hàng</h1>
+            </div>
+          </div>
+        </div>
+        <div class="news__container">
+          <div class="glide" id="glide_5">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="new__card">
+                    <div class="card__header">
+                      <img src="./images/news1.jpg" alt="">
+                    </div>
+                    <div class="card__footer">
+                      <h3>Styling White Shirts After A Cool Day</h3>
+                      <span>By <strong>Admin</strong></span>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
+                        provident rem sed minus natus unde vel modi!</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="new__card">
+                    <div class="card__header">
+                      <img src="./images/news2.jpg" alt="">
+                    </div>
+                    <div class="card__footer">
+                      <h3>Styling White Shirts After A Cool Day</h3>
+                      <span>By <strong>Admin</strong></span>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
+                        provident rem sed minus natus unde vel modi!</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="new__card">
+                    <div class="card__header">
+                      <img src="./images/news3.jpg" alt="">
+                    </div>
+                    <div class="card__footer">
+                      <h3>Styling White Shirts After A Cool Day</h3>
+                      <span>By <strong>Admin</strong></span>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
+                        provident rem sed minus natus unde vel modi!</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="new__card">
+                    <div class="card__header">
+                      <img src="./images/news4.jpg" alt="">
+                    </div>
+                    <div class="card__footer">
+                      <h3>Styling White Shirts After A Cool Day</h3>
+                      <span>By <strong>Admin</strong></span>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
+                        provident rem sed minus natus unde vel modi!</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="new__card">
+                    <div class="card__header">
+                      <img src="./images/news5.jpg" alt="">
+                    </div>
+                    <div class="card__footer">
+                      <h3>Styling White Shirts After A Cool Day</h3>
+                      <span>By <strong>Admin</strong></span>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
+                        provident rem sed minus natus unde vel modi!</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- NewsLetter -->
     <section class="section newsletter" id="contact">
       <div class="container">
         <div class="newsletter__content">
           <div class="newsletter__data">
-            <h3>ĐĂNG KÝ ĐỂ THEO DÕI THÊM VỀ CHÚNG TÔI</h3>
+            <h3>ĐĂNG KÝ ĐỂ theoDÕI THÊM VỀ CHÚNG TÔI</h3>
             <p>Một câu ngắn mô tả những gì ai đó sẽ nhận được bằng cách đăng ký</p>
           </div>
           <form action="#">

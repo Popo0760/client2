@@ -31,25 +31,25 @@
 <body>
   <header id="header" class="header">
     <div class="navigation">
-      <div class="container">
-        <input type="hidden" id="usernameBE" value="" />
-        <div class="row header__top" >
-          <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
-            <p>206 Đường Kim Mã, Quận Ba Đình, TP. Hà Nội</p>
-          </div>
-          <div id="row-login" class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
-            <div class="header__actions">
-              <a href="login.html">Đăng nhập</a>
-              <a href="register.html">Đăng ký</a>
-            </div>
-          </div>
-          <div id="row-logout" class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
-            <div class="header__actions">
-              <a href="" id="hello-name"></a>
-              <a href="">Đăng xuất</a>
-            </div>
+      <input type="hidden" id="usernameBE" value="haitn" />
+      <div class="row header__top" >
+        <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
+          <p>206 Đường Kim Mã, Quận Ba Đình, TP. Hà Nội</p>
+        </div>
+        <div id="row-login" class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
+          <div class="header__actions">
+            <a href="login.html">Đăng nhập</a>
+            <a href="register.html">Đăng ký</a>
           </div>
         </div>
+        <div id="row-logout" class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+          <div class="header__actions">
+            <a href="" id="hello-name"></a>
+            <a href="">Đăng xuất</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
         <nav class="nav">
           <div class="nav__hamburger">
             <svg>
@@ -233,8 +233,38 @@
                               <span class="checkout-product-ordered-list-item__variation">Loại: </span>
                             </div>
                             <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--price">140000 đ</div>
-                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--amount">3</div>
-                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--subtotal">420000 đ</div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--amount">4</div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--subtotal"></div>
+                          </div> 
+                          <div class="checkout-product-ordered-list-item__item checkout-product-ordered-list-item__item--non-add-on">
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--product">
+                              <img class="checkout-product-ordered-list-item__product-image img-fluid" src="https://vn-live-01.slatic.net/p/fab431d28976ce60654b4fbfce556207.jpg" width="90" height="90">
+                              <span class="checkout-product-ordered-list-item__product-info">
+                                <span class="checkout-product-ordered-list-item__product-name">Vòng cổ chuông cho mèo</span>
+                                <div></div>
+                              </span>
+                            </div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--variation">
+                              <span class="checkout-product-ordered-list-item__variation">Loại: </span>
+                            </div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--price">2034000 đ</div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--amount">2</div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--subtotal"></div>
+                          </div> 
+                          <div class="checkout-product-ordered-list-item__item checkout-product-ordered-list-item__item--non-add-on">
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--product">
+                              <img class="checkout-product-ordered-list-item__product-image img-fluid" src="https://vn-live-01.slatic.net/p/fab431d28976ce60654b4fbfce556207.jpg" width="90" height="90">
+                              <span class="checkout-product-ordered-list-item__product-info">
+                                <span class="checkout-product-ordered-list-item__product-name">Vòng cổ chuông cho mèo</span>
+                                <div></div>
+                              </span>
+                            </div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--variation">
+                              <span class="checkout-product-ordered-list-item__variation">Loại: </span>
+                            </div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--price">170000 đ</div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--amount">1</div>
+                            <div class="checkout-product-ordered-list-item__header checkout-product-ordered-list-item__header--subtotal"></div>
                           </div> 
                         </div>
                       </div>
@@ -481,6 +511,13 @@
   <script src="./js/custom.js"></script>    
   <script src="./js/check-out.js"></script>
   <script src="./js/sweat-alert.js"></script>
+  <script>
+    function logabc(){
+      var tt = document.getElementById("adressRecive").value;
+    console.log(tt);
+    }
+    
+  </script>
 </body>
 
 </html>

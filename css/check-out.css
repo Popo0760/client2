@@ -309,6 +309,7 @@ svg:not(:root){
     font-size: .875rem;
     color: #222;
     min-height: 3.4375rem;
+    padding-bottom: 10px;
 }
 .checkout-product-ordered-list-item__header{
 overflow: hidden;

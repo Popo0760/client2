@@ -61,17 +61,36 @@ function anDoiDiaChi(){
 
 $(function(){
    let value = $("#valuePetOrAccessori").val();
-    if(value == "cho"){
+    if(value == "pet"){
         $("#phuKien").addClass("hide");
         $("#cho").removeClass("hide");
         $("#thuCung").removeClass("hide");
         $("#phu-kien").addClass("hide");
-    }else if(value == "phuKien"){
+    }else if(value == "acc"){
         $("#phuKien").removeClass("hide");
         $("#cho").addClass("hide");
         $("#thuCung").addClass("hide");
         $("#phu-kien").removeClass("hide");
     }
 })
+
+$(function(){
+    var tl = $(".isPetOrAcc").val();
+    console.log(tl);
+    if(tl == "pets"){
+        $(".add").addClass("hide");
+        $(".depost").removeClass("hide");
+    }
+     if(tl == "accs"){
+        $(".add").removeClass("hide");
+        $(".depost").addClass("hide");
+    }
+})
+
+function addToCart(){
+    var count = document.getElementById("cart__total").innerText;
+    document.getElementById("cart__total").innerText= parseInt(count)+1;
+
+}
 
 
